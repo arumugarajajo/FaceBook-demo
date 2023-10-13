@@ -1,8 +1,16 @@
 import "./post.css"
 import { MoreVert } from "@mui/icons-material"
 import {Users} from "../../dummyData"
+import { useState } from "react"
 
 export default function Post({post}) {
+    const [like,setLike] = useState(post.like);
+    const [isLiked,setIsLiked] = useState(false);
+    const handleLike=()=>{
+        setLike(isLiked ? like-1 : like + 1);
+        setIsLiked(!isLiked);
+
+    }
     return (
         <div className="post">
             <div className="postWrapper">
@@ -22,9 +30,9 @@ export default function Post({post}) {
                 </div>
                 <div className="postBottom">
                     <div className="postBottomLeft">
-                        <img className="postBottomImg" src="/Assets/heart.png" alt="Heart" />
-                        <img className="postBottomImg" id="like" src="/Assets/like.png" alt="Heart" />
-                        <span className="postLike">{post.like} people liked it</span>
+                        <img className="postBottomImg" src="/Assets/heart.png" onClick={handleLike} alt="Heart" />
+                        <img className="postBottomImg" id="like" src="/Assets/like.png" onClick={handleLike} alt="Heart" />
+                        <span className="postLike">{like} people liked it</span>
                     </div>
                     <div className="postBottomRight">
                         <span className="postCommentText">{post.comment} comments</span>

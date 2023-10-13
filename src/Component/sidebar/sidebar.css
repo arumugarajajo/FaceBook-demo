@@ -43,33 +43,3 @@
 .sidebarHr{
     margin: 20px 0;;
 }
-.sidebarFriendList{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-
-}
-.sidebarFriend{
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    border-radius: 32px;
-    background-color: rgba(128, 128, 128, 0.171);
-    padding: 5px;
-
-}
-.sidebarFriendImg{
-    width: 32px;
-    height: 33px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 10px;
-    padding-left: 10px;
-}
-.sidebarFriendUserName
-{
-    font-size: 15px;
-    font-weight: 200;
-    text-align: center;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
-}
